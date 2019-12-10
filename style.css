@@ -4,8 +4,8 @@
 .purple img { background-color: purple; }
 .box.missing { display: none; } /* "Works" in that following cells fill in, BUT, then calculated "left" is wrong! */
 .box {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     /* Firefox is the only browser that can animate grid-template-columns.
        So instead, script will compute where the selected left edge has to be
        relative to where it starts when not selected. */
@@ -27,8 +27,8 @@
     margin: 0;
 }
 .selected {
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
 }
 /* There's no "all siblings" selector in css yet, so add .hasSelected
    to parent when we add .selected to one child. This then catches all
@@ -43,7 +43,7 @@
        changing size allows their row to change. So lock them into
        columns. */
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    width: 300px;
+    grid-template-columns: 200px 200px 200px;
+    width: 600px;
     margin: auto;
 }

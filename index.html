@@ -6,11 +6,12 @@
     <script type="text/javascript">
       function toggle(event) {
       const target = event.target, parent = target.parentElement;
+      const index = Array.prototype.indexOf.call(parent.children, target);
+      const columnWidths = getComputedStyle(parent).gridTemplateColumns.split(/\s/);
+      const nColumns = columnWidths.length, column = index % nColumns, width = parseInt(columnWidths[column]);
       target.classList.toggle('selected');
       parent.classList.toggle('hasSelected');
-      const index = Array.prototype.indexOf.call(parent.children, target);
-      const column = index % 3;
-      target.style.left = target.classList.contains('selected') ? `-${column * 100}px` : "0";
+      target.style.left = target.classList.contains('selected') ? `-${column * width}px` : "0";
       }
     </script>    
   </head>
