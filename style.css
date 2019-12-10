@@ -6,13 +6,14 @@
 .box {
     height: 200px;
     width: 200px;
-    opacity: 1;
+    opacity: 1; /* Here and elsewhere, the explicit 1 is a failed attempt to get transition FROM 1 to animated on ios. */
     /* Firefox is the only browser that can animate grid-template-columns.
        So instead, script will compute where the selected left edge has to be
        relative to where it starts when not selected. */
     position: relative;
     left: 0; /* auto does not animate well, so be explicit. */
-    /* transition: height 0.8s, width 0.8s, left 0.8s, opacity 0.4s; */
+    transition: height 1s, width 1s, left 1s, opacity 1s;
+    /* This and the repeats below are the same failed attempt mentioned above. */
     -webkit-transition: height 1s, width 1s, left 1s, opacity 1s;
 }
 .box img {
@@ -40,6 +41,7 @@
     opacity: 0;
     height: 0;
     width: 0;
+    transition: height 1s, width 1s, left 1s, opacity 1s;    
     -webkit-transition: height 1s, width 1s, left 1s, opacity 1s;
 }
 .picker {
