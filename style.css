@@ -6,6 +6,7 @@
 .box {
     height: 200px;
     width: 200px;
+    opacity: 1;
     /* Firefox is the only browser that can animate grid-template-columns.
        So instead, script will compute where the selected left edge has to be
        relative to where it starts when not selected. */
@@ -30,6 +31,7 @@
 .selected {
     height: 400px;
     width: 400px;
+    opacity: 1;    
 }
 /* There's no "all siblings" selector in css yet, so add .hasSelected
    to parent when we add .selected to one child. This then catches all
