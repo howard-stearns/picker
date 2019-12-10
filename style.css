@@ -40,6 +40,7 @@
     opacity: 0;
     height: 0;
     width: 0;
+    -webkit-transition: height 1s, width 1s, left 1s, opacity 1s;
 }
 .picker {
     /* Children with float: left do not animate smoothly when their
