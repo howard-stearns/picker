@@ -12,7 +12,7 @@
     position: relative;
     left: 0; /* auto does not animate well, so be explicit. */
     /* transition: height 0.8s, width 0.8s, left 0.8s, opacity 0.4s; */
-    -webkit-transition: height 1s, width 1s, left 1s;
+    -webkit-transition: height 1s, width 1s, left 1s, opacity 1s;
 }
 .box img {
     border-radius: 50%;
