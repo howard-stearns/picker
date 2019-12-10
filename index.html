@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function toggle(event) {
+      const target = event.target, parent = target.parentElement;
+      target.classList.toggle('selected');
+      parent.classList.toggle('hasSelected');
+      const index = Array.prototype.indexOf.call(parent.children, target);
+      const column = index % 3;
+      target.style.left = target.classList.contains('selected') ? `-${column * 100}px` : "0";
+      }
+    </script>    
+  </head>
+
+  <body>
+    <div class="picker">
+      <div class="red    box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>1</span></div>
+      <div class="green  box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>2</span></div>
+      <div class="blue   box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>3</span></div>
+      <div class="purple box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>4</span></div>
+      <div class="red    box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>5</span></div>
+      <div class="green  box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>6</span></div>
+      <div class="blue   box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>7</span></div>
+      <div class="purple box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>8</span></div>
+      <div class="red    box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>9</span></div>
+      <div class="green  box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>10</span></div>
+      <div class="blue   box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>11</span></div>
+      <div class="purple box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>12</span></div>
+      <div class="red    box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>13</span></div>
+      <div class="green  box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>14</span></div>
+      <div class="blue   box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>15</span></div>
+      <div class="purple box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>16</span></div>
+      <div class="red    box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>17</span></div>
+      <div class="green  box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>18</span></div>
+      <div class="blue   box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>19</span></div>
+      <div class="purple box" onclick="toggle(event)"><img src="http://simpleicon.com/wp-content/uploads/user1.png"/><span>20</span></div>
+    </div>
+  </body>
+</html>

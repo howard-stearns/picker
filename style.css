@@ -1,0 +1,49 @@
+.red img    { background-color: red; }
+.green img  { background-color: green; }
+.blue img   { background-color: blue; }
+.purple img { background-color: purple; }
+.box.missing { display: none; } /* "Works" in that following cells fill in, BUT, then calculated "left" is wrong! */
+.box {
+    height: 100px;
+    width: 100px;
+    /* Firefox is the only browser that can animate grid-template-columns.
+       So instead, script will compute where the selected left edge has to be
+       relative to where it starts when not selected. */
+    position: relative;
+    left: 0; /* auto does not animate well, so be explicit. */
+    transition: height 0.8s, width 0.8s, left 0.8s, opacity 0.4s;
+}
+.box img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+.box span {
+    line-height: 0.70;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+}
+.selected {
+    height: 200px;
+    width: 200px;
+}
+/* There's no "all siblings" selector in css yet, so add .hasSelected
+   to parent when we add .selected to one child. This then catches all
+   the other children. */
+.hasSelected > :not(.selected) {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.picker {
+    /* Children with float: left do not animate smoothly when their
+       changing size allows their row to change. So lock them into
+       columns. */
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    width: 300px;
+    margin: auto;
+}
